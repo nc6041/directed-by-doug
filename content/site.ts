@@ -11,6 +11,9 @@ export const siteConfig = {
   // Add social profiles here, e.g. { label: "Instagram", href: "https://instagram.com/..." }.
   // Nothing is shown while this list is empty.
   socials: [] as { label: string; href: string }[],
+  // Optional looping hero clip (muted, ~5-15s, H.264 MP4 + WebM, under ~5MB).
+  // Host the files on a CDN and paste the URLs here; the hero photo stays as the poster.
+  heroVideo: null as { mp4: string; webm?: string } | null,
   nav: [
     { label: "Work", href: "/work" },
     { label: "About", href: "/about" },

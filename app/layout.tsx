@@ -40,7 +40,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bebas.variable} ${homemadeApple.variable}`}>
-      <body>
+      <body className="flex min-h-svh flex-col">
         <a
           href="#main"
           className="sr-only z-50 bg-accent px-4 py-2 font-label text-nav text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
@@ -48,7 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Header />
-        <main id="main">{children}</main>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

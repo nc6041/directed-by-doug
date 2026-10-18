@@ -1,5 +1,7 @@
 import Image from "next/image";
 import heroImage from "@/public/images/hero.jpg";
+import { siteConfig } from "@/content/site";
+import BackgroundVideo from "./BackgroundVideo";
 
 // Desktop frame is 1728x1117. Title block top at 240px (21.5%),
 // arrow from 736px to 808px (66-72%).
@@ -15,6 +17,9 @@ export default function Hero() {
         sizes="100vw"
         className="object-cover object-[50%_30%]"
       />
+      {siteConfig.heroVideo && (
+        <BackgroundVideo mp4={siteConfig.heroVideo.mp4} webm={siteConfig.heroVideo.webm} poster={heroImage.src} />
+      )}
       <div aria-hidden className="absolute inset-0 bg-black opacity-overlay" />
 
       <div className="absolute inset-x-0 top-[21.5%] flex flex-col items-center gap-2 px-gutter-sm text-center">
