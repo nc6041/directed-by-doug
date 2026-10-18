@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"],
+    // WebP only: AVIF compresses smaller but smooths away film grain.
+    formats: ["image/webp"],
     remotePatterns: [
       // YouTube and Vimeo thumbnails
       { protocol: "https", hostname: "i.ytimg.com" },

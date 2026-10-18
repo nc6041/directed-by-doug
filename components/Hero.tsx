@@ -15,6 +15,8 @@ export default function Hero() {
         priority
         placeholder="blur"
         sizes="100vw"
+        // Higher than the default 75 so the film grain survives compression
+        quality={90}
         className="object-cover object-[50%_30%]"
       />
       {siteConfig.heroVideo && (
