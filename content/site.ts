@@ -1,6 +1,14 @@
-// Site-wide settings. Swap `url` for the real domain once it's connected.
+// The site's public address, used for link previews and the sitemap.
+// Once a custom domain is connected, replace this whole expression with it,
+// e.g. `const siteUrl = "https://dougtruong.com";`
+// Until then it uses the Vercel address automatically (localhost when developing).
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
+// Site-wide settings.
 export const siteConfig = {
-  url: "https://example.com",
+  url: siteUrl,
   name: "Doug Truong",
   title: "Doug Truong | Director",
   description:

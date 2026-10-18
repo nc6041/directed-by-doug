@@ -96,13 +96,13 @@ Aim for under ~3 MB per preview clip and under ~5 MB for a hero clip. To use a h
 2. In Vercel, open the project → **Settings → Domains**, type the domain (e.g. `dougtruong.com`) and click **Add**. Add the `www.` version too when Vercel offers it.
 3. Vercel shows the DNS records to create. At your registrar's DNS settings, add exactly what Vercel lists (typically an `A` record for the bare domain and a `CNAME` for `www`). If you bought the domain through Vercel, this is done for you.
 4. Wait for Vercel to show **Valid Configuration** (minutes to a few hours). HTTPS is set up automatically.
-5. Update the site URL so link previews and the sitemap use the real domain. In `content/site.ts`, change:
+5. Point the site URL at the real domain so link previews and the sitemap use it. At the top of `content/site.ts`, replace the `siteUrl` expression with your domain, for example:
 
    ```ts
-   url: "https://example.com",
+   const siteUrl = "https://dougtruong.com";
    ```
 
-   to your domain, for example `url: "https://dougtruong.com"`, then commit and push.
+   then commit and redeploy. (Until you do, it uses the `.vercel.app` address automatically.)
 
 ## Before launch checklist
 
@@ -110,4 +110,4 @@ Aim for under ~3 MB per preview clip and under ~5 MB for a hero clip. To use a h
 - [ ] Social links in `content/site.ts`
 - [ ] Loglines, descriptions, roles and credits in `content/projects.ts`
 - [ ] Optional: real stills as thumbnails instead of YouTube's
-- [ ] Site URL in `content/site.ts` once the domain is connected
+- [ ] Site URL in `content/site.ts` once a custom domain is connected

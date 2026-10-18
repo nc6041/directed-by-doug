@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 // Edit the bio and facts here.
 const bio = [
   "Doug Truong is a director based in Los Angeles. He is currently an MFA candidate in Film and Television Production at Loyola Marymount University's School of Film and Television.",
-  "Before film school, Doug worked at Amdocs.",
+  "Before film school, Doug worked at American Documentary.",
 ];
 
 const facts = [
   { label: "Based in", value: "Los Angeles, CA" },
   { label: "Education", value: "MFA, Film & Television Production, LMU (in progress)" },
-  { label: "Previously", value: "Amdocs" },
+  { label: "Previously", value: "American Documentary" },
 ];
 
 export default function AboutPage() {
