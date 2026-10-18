@@ -56,6 +56,7 @@ export function previewUrl(src: VideoSource, start = 20) {
       modestbranding: "1",
       disablekb: "1",
       iv_load_policy: "3",
+      cc_load_policy: "0",
       fs: "0",
     });
     return `https://www.youtube-nocookie.com/embed/${src.id}?${p}`;
