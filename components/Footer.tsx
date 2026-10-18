@@ -4,16 +4,16 @@ import { siteConfig } from "@/content/site";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mx-gutter-sm mt-[151px] pb-[79px] md:mx-gutter">
-      <p className="font-label text-nav leading-[56px]">Directed by</p>
-      <p className="mt-2 font-script text-[28px] leading-[56px] text-accent md:mt-4 md:text-name">
+    <footer className="mx-gutter-sm mt-[120px] flex flex-col gap-4 pb-12 md:mx-gutter md:mt-[151px] md:pb-[79px]">
+      <p className="font-label text-nav leading-[48px]">Directed by</p>
+      <p className="font-script text-[28px] leading-[48px] text-accent md:text-name md:leading-[48px]">
         {siteConfig.name}
       </p>
-      <p className="mt-4 max-w-[1185px] text-sm leading-[22px] text-white/80">{siteConfig.footerBlurb}</p>
+      <p className="max-w-[1185px] text-sm leading-[22px] text-white/80">{siteConfig.footerBlurb}</p>
 
-      <hr className="mt-4 border-0 border-t border-white/25" />
+      <hr className="border-0 border-t border-white/25" />
 
-      <div className="mt-4 flex flex-col gap-6 md:grid md:grid-cols-3 md:items-center">
+      <div className="flex flex-col gap-6 md:grid md:min-h-8 md:grid-cols-3 md:items-center">
         <nav aria-label="Footer">
           <ul className="flex gap-4">
             {siteConfig.nav.map((item) => (
