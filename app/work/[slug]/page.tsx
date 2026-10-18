@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject((await params).slug);
   if (!project) return {};
   const description =
-    project.logline ?? `${project.title} (${project.year}), ${project.role.toLowerCase()} Doug Truong.`;
+    project.logline ?? `${project.title} (${project.year}), a film by Doug Truong.`;
   const image = thumbnailFor(parseVideoUrl(project.videoUrl), project.thumbnail);
   return {
     title: project.title,
