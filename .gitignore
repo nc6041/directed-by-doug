@@ -31,3 +31,6 @@ Thumbs.db
 *.prores
 *.r3d
 *.braw
+
+.vercel
+.env*
